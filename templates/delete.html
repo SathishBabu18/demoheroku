@@ -1,0 +1,16 @@
+<form method = "POST">
+    {% csrf_token %}
+
+<h1> Product Details</h1>    
+Product Number:{{product.id}}<br>
+Product Name:{{ product.name }}<br>
+Price:{{ product.price }}<br>
+Description:{{ product.description }}<br>
+Contact Number:{{ product.contact_number }}<br>
+    
+
+
+    <input type ="submit" value = "Yes Delete">
+    <a href = "/home/">Cancel<a>
+</form>
+

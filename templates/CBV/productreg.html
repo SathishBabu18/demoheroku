@@ -1,0 +1,12 @@
+<h1>This is product reg</h1>
+<h2>Enter the product Details here.</h2>
+
+<form method="POST" enctype="multipart/form-data">
+ 
+    {% csrf_token %}
+ 
+    {{ form.as_p }}
+     
+    <input type="submit" value="Submit">
+</form>
+

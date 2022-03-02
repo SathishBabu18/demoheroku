@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block content %}
+<h1>Hai Sir </h1> 
+{% for x in output %}
+    Product_Id: {{x.id}}<br>
+    Product_Name: {{x.name}}<br>
+    Product_Price: {{x.price}}<br>
+    Product_Description: {{x.description}}<br>
+    Product_Contact: {{x.contact_number}}<br>
+
+<a type="button" class="btn btn-primary" href="{% url 'detail_product' x.id %}">Details</a>
+<a type="button" class="btn btn-success" href="{% url 'update_product' x.id %}">Update</a>
+<a type="button" class="btn btn-danger"  href="{% url 'delete_product' x.id %}">Delete</a>
+
+<br><hr>
+
+{% endfor %}
+{% endblock %}
+
+<!-- {% for x in pro %}
+{{x.id}}
+{{x.name}}
+{{x.price}}
+{{x.description}}
+{{x.contact_number}}
+{% endfor %} -->
+
